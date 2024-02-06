@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer keyframes {
+    @keyframes infiniteSliderHorizontal {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-1000px - 1rem));
+        /*     transform: translateX(calc(1000px + 1rem)); */
+      }
+    }
+    @keyframes infiniteSliderHorizontalRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(1000px + 1rem));
+        /*     transform: translateX(calc(1000px + 1rem)); */
+      }
+    }
+  }
+  
+@layer utilities {
+    .animate-infinite-slider-horizontal {
+      animation: infiniteSliderHorizontal 45s linear infinite;
+    }
+    .animate-infinite-slider-right {
+      animation : infiniteSliderHorizontalRight 45s linear infinite;
+    }
+}
